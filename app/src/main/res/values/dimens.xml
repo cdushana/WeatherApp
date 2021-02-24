@@ -1,3 +1,17 @@
 <resources>
     <dimen name="spacing_from_edge">20dp</dimen>
+    <dimen name="surrounding_margin">30dp</dimen>
+    <dimen name="margin_between_feels_like_and_appearance">20dp</dimen>
+    <dimen name="appearance_text_size">30sp</dimen>
+    <dimen name="feels_like_text_size">25sp</dimen>
+    <dimen name="temperature_text_size">80sp</dimen>
+    <dimen name="margin_between_appearance_and_description">10dp</dimen>
+    <dimen name="appearance_description_text_size">25sp</dimen>
+    <dimen name="guideline">35dp</dimen>
+    <dimen name="start_weather_guideline">235dp</dimen>
+    <dimen name="item_margin">20dp</dimen>
+    <dimen name="weather_item_text_size">20sp</dimen>
+    <dimen name="margin_between_lookup_button_and_edittext">20dp</dimen>
+    <dimen name="city_name_edit_text_width">300dp</dimen>
+    <dimen name="city_name_button_width">300dp</dimen>
 </resources>

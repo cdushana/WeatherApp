@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="noDivider" type="id" />
-    <item name="viewData" type="id" />
-    <item name="job" type="id" />
 </resources>

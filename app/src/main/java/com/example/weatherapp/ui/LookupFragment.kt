@@ -50,6 +50,7 @@ class LookupFragment : Fragment() {
             (activity as AppCompatActivity).supportActionBar?.title = cityName.capitalize()
 
             if (cityName.isNotEmpty()) {
+                // TODO check response and prevent navigation where there aren't valid results
                 viewModel.retrieveWeatherForCity(cityName)
                 findNavController().navigate(R.id.action_LookupFragment_to_WeatherListFragment)
             }

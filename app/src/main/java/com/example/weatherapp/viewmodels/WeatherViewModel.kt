@@ -9,18 +9,20 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+// TODO add dependency injection here, make this a Singleton
 class WeatherViewModel : ViewModel() {
 
     private val _forecast = MutableLiveData<WeatherData>()
     val forecast: LiveData<WeatherData> get() = _forecast
 
     fun retrieveWeatherForCity(cityName: String) {
+        // TODO could create repository
         RetrofitClient()
             .createWeatherService()
             .getWeatherForCity(cityName)
             .enqueue(object : Callback<WeatherData> {
                 override fun onFailure(call: Call<WeatherData>, t: Throwable) {
-                    // TODO error handling
+                    // TODO error handling, internal server error
                 }
 
                 override fun onResponse(call: Call<WeatherData>, response: Response<WeatherData>) {
@@ -28,7 +30,7 @@ class WeatherViewModel : ViewModel() {
                         _forecast.postValue(response.body())
                     } else {
                         _forecast.postValue(null)
-                       // TODO error handling
+                       // TODO error handling, response comes back successful, but code shows error
                     }
                 }
             })

@@ -15,7 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textAlignment="center"
-        android:textSize="80sp"
+        android:textSize="@dimen/temperature_text_size"
         android:textColor="@color/black"
         tools:text="72"/>
 
@@ -27,8 +27,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textAlignment="viewEnd"
-        android:layout_marginEnd="30dp"
-        android:textSize="25sp"
+        android:layout_marginEnd="@dimen/surrounding_margin"
+        android:textSize="@dimen/feels_like_text_size"
         android:textColor="@color/black"
         tools:text="Feels like: 78"/>
 
@@ -39,9 +39,9 @@
         app:layout_constraintTop_toBottomOf="@id/feelsLike"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:textSize="30sp"
+        android:layout_marginStart="@dimen/surrounding_margin"
+        android:layout_marginTop="@dimen/margin_between_feels_like_and_appearance"
+        android:textSize="@dimen/appearance_text_size"
         android:textColor="@color/black"
         tools:text="Clouds"/>
 
@@ -52,9 +52,9 @@
         app:layout_constraintTop_toBottomOf="@id/appearance"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:textSize="25sp"
+        android:layout_marginStart="@dimen/surrounding_margin"
+        android:layout_marginTop="@dimen/margin_between_appearance_and_description"
+        android:textSize="@dimen/appearance_description_text_size"
         android:textColor="@color/black"
         tools:text="broken clouds"/>
 
