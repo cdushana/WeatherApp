@@ -47,12 +47,10 @@ class LookupFragment : Fragment() {
 
         lookupButton.setOnClickListener {
             cityName = cityLookupEditText.text.toString()
+            (activity as AppCompatActivity).supportActionBar?.title = cityName.capitalize()
 
             if (cityName.isNotEmpty()) {
-                val result = viewModel.retrieveWeatherForCity(cityName)
-
-                (activity as AppCompatActivity).supportActionBar?.title = cityName.capitalize()
-
+                viewModel.retrieveWeatherForCity(cityName)
                 findNavController().navigate(R.id.action_LookupFragment_to_WeatherListFragment)
             }
         }

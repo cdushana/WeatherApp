@@ -32,7 +32,8 @@ class WeatherListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentWeatherListBinding.inflate(inflater, container, false)
+        val binding = FragmentWeatherListBinding
+            .inflate(inflater, container, false)
         this.binding = binding
         binding.initialize()
         return binding.root
