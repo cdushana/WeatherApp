@@ -9,7 +9,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class WeatherViewModel : ViewModel() {
 
     private val _forecast = MutableLiveData<WeatherData>()
@@ -21,21 +20,15 @@ class WeatherViewModel : ViewModel() {
             .getWeatherForCity(cityName)
             .enqueue(object : Callback<WeatherData> {
                 override fun onFailure(call: Call<WeatherData>, t: Throwable) {
-                    println("city not found")
+                    // TODO error handling
                 }
 
                 override fun onResponse(call: Call<WeatherData>, response: Response<WeatherData>) {
                     if (response.isSuccessful) {
                         _forecast.postValue(response.body())
                     } else {
-                        println("Failure")
-                        // error case
-//                        when (response.code()) {
-//                            404 ->
-//                            500 ->
-//                            else ->
-
-//                        }
+                        _forecast.postValue(null)
+                       // TODO error handling
                     }
                 }
             })
