@@ -4,6 +4,7 @@ import com.example.weatherapp.helpers.Constants
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
+// TODO could make this a Singleton too, add dependency injection
 class RetrofitClient {
     fun createWeatherService(): WeatherService {
         val retrofit = Retrofit.Builder()
